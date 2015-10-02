@@ -1,0 +1,28 @@
+
+This is a data transformation problem we have right now: we get a table of transaction data. Each row is a transaction record that includes the entry and exit time of a car, along with some other extra information. We’d like to know the distribution of the amount of time people stay in the garage (we call it duration) based on their entry time.
+
+For example, a result table should look like:
+
+Entry time          1   2   3   4   5 ...
+2015-06-01 10:00    10  15  22  5   2 ...
+2015-06-01 11:00    15  27  33  15  9 ...
+
+It means for all the people who came in between 2015-06-01 10AM and 11AM, there are 10 that stayed for less than 1 hour, 15 that stayed between 1-2 hours, 22 stayed between 2-3 hours, etc. Similarly, for people who entered between 2015-06-01 11AM and 12PM, there are 15 that stayed for less than 1 hour, 27 that stayed between 1-2 hours, 33 stayed between 2-3 hours, etc.
+
+Using this table, we can then quickly aggregate the distribution for 3 hours, a day, a week, a month, etc.
+
+So the problem is defined as follows:
+1. Given a table of transactions, provide a table of duration distribution aggregated by entry hour (like the sample table above).
+2. Provide a function that accepts queries in terms of (start time, end time, entry day of week, entry hour). Allow an 'All' option for both entry day of week and entry hour.
+
+    For example, for query (2015-06-01 10:00, 2015-07-01 10:00, 'Wednesday', '15'), the function should return a dictionary { 1: 2937, 2: 7729, 3: 8171, 4: 5752, ... } which means there are 2937 people who entered the garage at 15:00 (3PM) on Wednesdays between June 1, 2015, 10AM and July 1, 2015, 10AM. Similarly, there are 7729 people parked there between 1 and 2 hours during that specific time span. These numbers are made up, but you get what I mean.
+
+Some clarifications:
+
+- Use Python and "pandas" package for data processing and manipulation.
+- The given transactions (the "transactions.pkl" file) are in "DataFrame" format (defined in "pandas" package), pickled into a file.
+- Some sample data and statistics about these transactions are stored in the "transactions_info.txt" file, just for your information.
+- You can use the "read_pickle" function defined in "pandas" to get the data into a DataFrame. The data file is pickled in Python 3, so if you get a protocol error, try Python 3 instead of Python 2.
+
+If you are not familiar with these tools, it's fine. There are plenty of documentations online. In Smarking, we need to learn a lot of new thing everyday, and being able to get familiar with new tools quickly is part of our job here.
+

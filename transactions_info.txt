@@ -1,0 +1,83 @@
+Total number of transactions: 236855
+
+Sample
+---------------------------------------------
+entry_time               2014-03-03 07:47:00
+entry_year                              2014
+entry_month                                3
+entry_day                                  3
+entry_hour                                 7
+entry_minute                              47
+entry_dayofweek                       Monday
+entry_date                        2014-03-03
+entry_date_hour          2014-03-03 07:00:00
+entry_year_week                       201409
+entry_year_month                      201403
+exit_time                2014-03-03 11:18:00
+exit_year                               2014
+exit_month                                 3
+exit_day                                   3
+exit_hour                                 11
+exit_minute                               18
+exit_dayofweek                        Monday
+exit_date                         2014-03-03
+exit_date_hour           2014-03-03 11:00:00
+exit_year_week                        201409
+exit_year_month                       201403
+duration_min                             211
+duration_hour                           3.52
+duration_hour_up                           4
+revenue                                 0.00
+gross_revenue                          22.00
+lot                                       -1
+entry_device                             NaN
+exit_device         ACG Red T/C Exit 6800//L
+ticket_number                          68156
+ticket_type                            Entry
+trans_number                           13296
+trans_type                            Normal
+rate                                       1
+card_number                               -1
+first_name                               NaN
+last_name                                NaN
+access_group                       Transient
+
+
+Entries
+------------------------------
+
+
+Exits
+-----------------------------------
+ACG 7800 L                   40979
+ACG 7800 R                   24717
+ACG Red T/C Exit 6800//L    108709
+Red EP                       62450
+
+Access groups
+------------------------------
+Transient    236855
+
+Ticket types
+---------------
+Entry    174121
+Exit        284
+Out       62450
+
+Transaction types
+-------------------------
+Add               710
+Allowed         62030
+Normal         173695
+Not Allowed       420
+
+Rate types
+--------------------
+0                   2
+1              174402
+2                   1
+GHP              4608
+Market          51278
+Market 2015      6481
+Oracle              8
+YMCA                2
